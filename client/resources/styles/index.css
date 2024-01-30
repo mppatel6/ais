@@ -1,0 +1,24 @@
+#content{
+    background-color: #F4D916;
+}
+
+.btn-primary{
+    background-color: #F4D916;
+    border-radius: 8px;
+    font-size: 16px;
+    border-color: transparent;
+}
+.btn-secondary{
+    background-color: #f4a616;
+    border-radius: 8px;
+    font-size: 16px;
+    border-color: transparent;
+}
+.btn-primary:hover{
+    background-color: #f4a616;
+    border-color: transparent;
+}
+.btn-secondary:hover{
+    background-color: #F4D916;
+    border-color: transparent;
+}

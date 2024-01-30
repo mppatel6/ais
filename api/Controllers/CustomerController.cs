@@ -16,10 +16,10 @@ namespace api.Controllers
         [HttpGet]
         public List<Customer> Get()
         {
-            // CustomerUtility readCustomer = new CustomerUtility();
-            // return readCustomer.LoadCustomers();
-            List<Customer> customers = CustomerUtility.LoadCustomers();
-            return customers;
+            CustomerUtility readCustomer = new CustomerUtility();
+            return readCustomer.ReadCustomers();
+            // List<Customer> customers = CustomerUtility.LoadCustomers();
+            // return customers;
         }
 
         // GET: api/Customer/5
