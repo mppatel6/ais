@@ -28,5 +28,22 @@ namespace api.Models
             con.Close();
             return customerList;
         }
+
+        public void AddCustomers(Customer value){
+            Database db = new Database();
+            using var con = new MySqlConnection(db.cs);
+            con.Open();
+
+            string stm = @"INSERT INTO customer(email, password, firstName, lastName) VALUES(@email, @password, @firstName, @lastName);";
+            using var cmd = new MySqlCommand(stm, con);
+
+            cmd.Parameters.AddWithValue("@email", value.email);
+            cmd.Parameters.AddWithValue("@password", value.password);
+            cmd.Parameters.AddWithValue("@firstName", value.firstName);
+            cmd.Parameters.AddWithValue("@lastName", value.lastName);
+
+            cmd.Prepare();
+            cmd.ExecuteNonQuery();
+        }
     }
 }

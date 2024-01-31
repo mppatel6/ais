@@ -31,8 +31,11 @@ namespace api.Controllers
 
         // POST: api/Customer
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Customer value)
         {
+            CustomerUtility addCust = new CustomerUtility();
+            addCust.AddCustomers(value);
+
         }
 
         // PUT: api/Customer/5
