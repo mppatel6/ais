@@ -2,6 +2,7 @@
     display: inline-block;
     width: 1rem;
     height: 1rem;
+    color: #f4a616;
   }
   
   /*
@@ -22,10 +23,11 @@
   .sidebar .nav-link {
     font-size: .875rem;
     font-weight: 500;
+    color: #f4a616;
   }
   
   .sidebar .nav-link.active {
-    color: #2470dc;
+    color: #F4D916;
   }
   
   .sidebar-heading {
@@ -39,8 +41,8 @@
   .navbar-brand {
     padding-top: .75rem;
     padding-bottom: .75rem;
-    background-color: rgba(0, 0, 0, .25);
-    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+    background-color: #212529;
+    box-shadow: inset -1px 0 0 #212529;
   }
   
   .navbar .form-control {
