@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cTE7Th0LVKJ/C9wphiSw17elveMsS9hbMttmmoqrElckcC4i6ypmJtf3fbrb4Yy7ztnJTk7cLHV032Znz3yuPg==",
+  "dgSpecHash": "M8DfWAIGhJCmwhVso7jZdW+atNQ3pnD1wphTuu3gzUALXsEIQl1LpQarNZyC5SCrpMginEBvmoQx5IfOhxL2BQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hrenn\\ais\\api\\api.csproj",
+  "projectFilePath": "C:\\Users\\hrenn\\Stuff\\ais\\api\\api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hrenn\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\hrenn\\.nuget\\packages\\dotnetenv\\3.0.0\\dotnetenv.3.0.0.nupkg.sha512",
