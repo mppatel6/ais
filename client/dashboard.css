@@ -41,11 +41,15 @@
   .navbar-brand {
     padding-top: .75rem;
     padding-bottom: .75rem;
-    background-color: #212529;
-    box-shadow: inset -1px 0 0 #212529;
+    background-color: #272727;
+    box-shadow: inset -1px 0 0 #272727;
   }
   
   .navbar .form-control {
     padding: .75rem 1rem;
+  }
+
+  .header-edit{
+    background-color: #272727;
   }
   
