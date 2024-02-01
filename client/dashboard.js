@@ -47,4 +47,17 @@
       }
     })
   })()
+
+
+
+  function trackMood() {
+    var selectedMood = document.getElementById('mood').value;
+    var userMessage = document.getElementById('message').value;
+
+    // You can add your logic to handle the mood and message data
+    console.log('Mood:', selectedMood);
+    console.log('Message:', userMessage);
+
+    // You can also send the data to a server or perform other actions as needed
+}
   

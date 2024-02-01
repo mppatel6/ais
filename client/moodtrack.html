@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker</title>
+    <link href="./resources/styles/moodtrack.css" rel="stylesheet">
+</head>
+<body>
+
+    <div id="mood-form">
+        <h2>Mood Tracker</h2>
+        <form id="user-mood-form">
+            <label for="mood">Select your mood:</label>
+            <select id="mood" name="mood" required>
+                <option value="happy">Happy</option>
+                <option value="sad">Sad</option>
+                <option value="excited">Excited</option>
+                <option value="calm">Calm</option>
+                <!-- Add more mood options as needed -->
+            </select>
+
+            <label for="message">Write a message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="button" onclick="trackMood()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function trackMood() {
+            var selectedMood = document.getElementById('mood').value;
+            var userMessage = document.getElementById('message').value;
+
+            // You can add your logic to handle the mood and message data
+            console.log('Mood:', selectedMood);
+            console.log('Message:', userMessage);
+
+            // You can also send the data to a server or perform other actions as needed
+        }
+    </script>
+</body>
+</html>
