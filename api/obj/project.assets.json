@@ -9998,19 +9998,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/carsonmiller/.nuget/packages/": {}
+    "/Users/manavpatel/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/carsonmiller/Desktop/AIS/ais/api/api.csproj",
+      "projectUniqueName": "/Users/manavpatel/Desktop/AIS/ais/api/api.csproj",
       "projectName": "api",
-      "projectPath": "/Users/carsonmiller/Desktop/AIS/ais/api/api.csproj",
-      "packagesPath": "/Users/carsonmiller/.nuget/packages/",
-      "outputPath": "/Users/carsonmiller/Desktop/AIS/ais/api/obj/",
+      "projectPath": "/Users/manavpatel/Desktop/AIS/ais/api/api.csproj",
+      "packagesPath": "/Users/manavpatel/.nuget/packages/",
+      "outputPath": "/Users/manavpatel/Desktop/AIS/ais/api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/carsonmiller/.nuget/NuGet/NuGet.Config"
+        "/Users/manavpatel/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -10074,7 +10074,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.403/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/7.0.100/libexec/sdk/7.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }
