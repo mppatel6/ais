@@ -51,13 +51,28 @@
 
 
   function trackMood() {
-    var selectedMood = document.getElementById('mood').value;
+    // var selectedMood = document.getElementById('mood').value;
     var userMessage = document.getElementById('message').value;
 
     // You can add your logic to handle the mood and message data
-    console.log('Mood:', selectedMood);
-    console.log('Message:', userMessage);
+    
 
-    // You can also send the data to a server or perform other actions as needed
+    if (recordedButtonId) {
+      // Set the recorded button ID to the hidden input field before submitting the form
+      // document.getElementById('buttonIdInput').value = recordedButtonId;
+      console.log("Form submitted with Button ID:", recordedButtonId);
+    } else {
+      console.error("Please press a button before submitting the form.");
+    }
+    // console.log('Mood:', selectedMood);
+    console.log('Message:', userMessage);
 }
+
+let recordedButtonId;
+
+  function recordButtonId(buttonId) {
+    recordedButtonId = buttonId;
+    console.log("Button ID recorded:", recordedButtonId);
+  }
+
   
