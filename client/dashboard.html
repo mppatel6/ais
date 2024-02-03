@@ -326,13 +326,14 @@
         <h2>Mood Tracker</h2>
         <form class="tracker-form" id="user-mood-form">
             <label for="mood">Select your mood:</label>
-            <select id="mood" name="mood" required>
-                <option value="happy">Happy</option>
-                <option value="sad">Sad</option>
-                <option value="excited">Excited</option>
-                <option value="calm">Calm</option>
-                <!-- Add more mood options as needed -->
-            </select>
+
+            <button id="button1" onclick="recordButtonId(this.id)"><img src="./resources/img/Moods/3.png" height = "40px"></button>
+            <button id="button2" onclick="recordButtonId(this.id)"><img src="./resources/img/Moods/2.png" height = "40px"></button>
+            <button id="button3" onclick="recordButtonId(this.id)"><img src="./resources/img/Moods/4.png" height = "40px"></button>
+            <button id="button4" onclick="recordButtonId(this.id)"><img src="./resources/img/Moods/5.png" height = "40px"></button>
+            <button id="button5" onclick="recordButtonId(this.id)"><img src="./resources/img/Moods/1.png" height = "40px"></button>
+            <button id="button6" onclick="recordButtonId(this.id)"><img src="./resources/img/Moods/6.png" height = "40px"></button>
+
       
             <label for="message">Write a message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
