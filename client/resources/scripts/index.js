@@ -1,6 +1,6 @@
 let app = document.getElementById("app")
 
-function handleOnLoad(){
+async function handleOnLoad(){
     let html = `
     <div class="my-5">
         <div class="p-5 text-center bg-body-tertiary">
