@@ -345,9 +345,11 @@
         <h2>Beam Bot</h2>
         <form class="tracker-form" id="chat-form">
             <label for="chat">Start a conversation</label>
-            <input type="text" id="" name="chat" autocomplete="off" required>
+            <textarea id = "chatter" name="message" rows="10" cols="30"> Chat bot response will appear here!
+            </textarea>
+            <input type="text" id="chat-text" name="chat" autocomplete="off" value = "type your question here" required>
 
-            <button type="button" onclick="">Enter</button>
+            <button type="button" onclick="generateResponse()">Enter</button>
         </form>
       </div>
 
@@ -356,7 +358,6 @@
         <form class="tracker-form" id="user-water-form">
             <label for="waterAmount">Enter your water intake (in ounces):</label>
             <input type="number" id="waterAmount" name="waterAmount" min="0" required>
-
             <button type="button" onclick="trackWaterIntake()">Submit</button>
         </form>
       </div>

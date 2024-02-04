@@ -61,3 +61,33 @@
     // You can also send the data to a server or perform other actions as needed
 }
   
+
+async function generateResponse(){
+  let text = document.getElementById("chat-text").value
+  console.log(text)
+  const url = "http://localhost:5100/api/Chat"
+
+  let response = await fetch(url,{  //post announcement to database
+    method: "POST",
+    body: JSON.stringify(text),
+    headers:{
+        "Content-type": "application/json; charset=UTF-8"
+    }
+  })
+  let response2 = await response.json()
+  // console.log(response2)
+  console.log(response2.choices[0].message.content)
+
+  gptresponse = response2.choices[0].message.content
+
+  document.getElementById("chatter").innerHTML = gptresponse
+
+  // const url1 = "http://localhost:5100/api/Customer"
+  // let response1 = await fetch(url1)
+  // let data = await response1.json()
+  // console.log(data)
+  // const url = "http://localhost:5100/api/Chat"
+  // let response = await fetch(url)
+  // let data1 = await response.json()
+  // console.log(data1)
+}
