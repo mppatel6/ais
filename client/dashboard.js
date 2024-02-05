@@ -93,7 +93,10 @@ let recordedButtonId;
   
     gptresponse = response2.choices[0].message.content
   
-    document.getElementById("chatter").innerHTML = gptresponse
+    document.getElementById("chatter").innerHTML += `\n\n`;
+    document.getElementById("chatter").innerHTML += text;
+    document.getElementById("chatter").innerHTML += `\n\n`;
+    document.getElementById("chatter").innerHTML += gptresponse
   
     // const url1 = "http://localhost:5100/api/Customer"
     // let response1 = await fetch(url1)

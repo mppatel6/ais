@@ -344,23 +344,23 @@
 
       <div class="tracker-container" id="chat-form">
         <h2>Beam Bot</h2>
-        <form class="tracker-form" id="chat-form">
+        <form class="tracker-form" id="chat-form" onsubmit="generateResponse(); return false;">
             <label for="chat">Start a conversation</label>
-            <textarea id = "chatter" name="message" rows="10" cols="30"> Chat bot response will appear here!
-            </textarea>
-            <input type="text" id="chat-text" name="chat" autocomplete="off" value = "type your question here" required>
-
-            <button type="button" onclick="generateResponse()">Enter</button>
+            <textarea id="chatter" name="message" rows="10" cols="30">Chat bot response will appear here!</textarea>
+            <input type="text" id="chat-text" name="chat" autocomplete="off" placeholder="type your question here" required>
+    
+            <button type="submit">Enter</button>
         </form>
-      </div>
+    </div>
+    
 
       <div class="tracker-container" id="water-form">
         <h2>Water Intake Tracker</h2>
-        <form class="tracker-form" id="user-water-form">
+        <form class="tracker-form" id="user-water-form" onsubmit="trackWaterIntake(); return false;">
             <label for="waterAmount">Enter your water intake (in ounces):</label>
             <input type="number" id="waterAmount" name="waterAmount" min="0" required>
 
-            <button type="button" onclick="trackWaterIntake()">Submit</button>
+            <button type="submit">Submit</button>
         </form>
       </div>
 
