@@ -321,15 +321,15 @@
 
 
       <div class="" id="chat-form">
-        <h2>Beam Bot</h2>
-        <form class="chat-form" id="chat-form">
+       <h2>Beam Bot</h2>
+        <form class="chat-form" id="chat-form" onsubmit="generateResponse(); return false;">
             <label for="chat">Start a conversation</label>
-            <input type="text" id="" name="chat" autocomplete="off" required>
-
-            <button type="button" onclick="">Enter</button>
+            <textarea id="chatter" name="message" rows="10" cols="30">Chat bot response will appear here!</textarea>
+            <input type="text" id="chat-text" name="chat" autocomplete="off" placeholder="type your question here" required>
+    
+            <button type="submit">Enter</button>
         </form>
       </div>
-
 
     </main>
   </div>
