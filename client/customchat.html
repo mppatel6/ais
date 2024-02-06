@@ -103,6 +103,32 @@
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
       }
+
+      /* Style for chat bubbles */
+.chat-container {
+    max-height: 300px; /* Adjust height as needed */
+    overflow-y: auto; /* Enable vertical scroll */
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.chat-message {
+    background-color: #f0f0f0;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+}
+
+.user-message {
+    background-color: #e2f0cb;
+}
+
+/* Style for input area */
+#chat-text {
+    width: calc(100% - 80px); /* Adjust width as needed */
+    margin-right: 10px;
+}
+
     </style>
 
     
@@ -320,7 +346,7 @@
 
 
 
-      <div class="" id="chat-form">
+      <!-- <div class="" id="chat-form">
        <h2>Beam Bot</h2>
         <form class="chat-form" id="chat-form" onsubmit="generateResponse(); return false;">
             <label for="chat">Start a conversation</label>
@@ -329,7 +355,19 @@
     
             <button type="submit">Enter</button>
         </form>
-      </div>
+      </div> -->
+
+      <div class="" id="chat-form">
+        <h2>Beam Bot</h2>
+        <div class="chat-container" id="chat-container"></div>
+        <form class="chat-form" id="chat-form" onsubmit="generateResponse(); return false;">
+            <label for="chat">Start a conversation</label>
+            <textarea id="chatter" name="message" rows="10" cols="30">Chat bot response will appear here!</textarea>
+            <input type="text" id="chat-text" name="chat" autocomplete="off" placeholder="type your question here" required>
+    
+            <button type="submit">Enter</button>
+        </form>
+    </div>
 
     </main>
   </div>

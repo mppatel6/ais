@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Journal</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom CSS styles */
+    .journal-entry {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-4 mb-4">My Journal</h1>
+
+    <!-- Form for entering new journal entry -->
+    <form id="journalForm">
+      <div class="form-group">
+        <label for="entryDate">Date:</label>
+        <input type="date" class="form-control" id="entryDate" required>
+      </div>
+      <div class="form-group">
+        <label for="entryContent">Write your journal entry:</label>
+        <textarea class="form-control" id="entryContent" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Add Entry</button>
+    </form>
+
+    <hr>
+
+    <!-- Display area for journal entries -->
+    <div id="journalEntries"></div>
+  </div>
+
+  <!-- JavaScript libraries -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script>
+    $(document).ready(function(){
+      // Function to handle form submission
+      $("#journalForm").submit(function(event){
+        event.preventDefault();
+        // Get values from form
+        var entryDate = $("#entryDate").val();
+        var entryContent = $("#entryContent").val();
+        // Create new journal entry element
+        var newEntry = $("<div>").addClass("journal-entry");
+        newEntry.append("<h4>" + entryDate + "</h4>");
+        newEntry.append("<p>" + entryContent + "</p>");
+        // Append new entry to journalEntries div
+        $("#journalEntries").append(newEntry);
+        // Clear form fields
+        $("#entryDate").val("");
+        $("#entryContent").val("");
+      });
+    });
+  </script>
+</body>
+</html>
