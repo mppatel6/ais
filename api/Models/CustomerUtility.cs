@@ -45,5 +45,22 @@ namespace api.Models
             cmd.Prepare();
             cmd.ExecuteNonQuery();
         }
+
+        public string GetTime(){
+            string formattedDate = string.Empty;
+            Database db = new Database();
+            using var con = new MySqlConnection(db.cs);
+            con.Open();
+            string stm = "select curdate() as date";
+            using var cmd = new MySqlCommand(stm,con);
+            using MySqlDataReader rdr = cmd.ExecuteReader();
+            while (rdr.Read()){
+                DateTime date = rdr.GetDateTime(0);
+                formattedDate = date.ToString("yyyy-MM-dd HH:mm:ss");
+            }
+            con.Close();
+            Console.WriteLine(formattedDate);
+            return formattedDate;
+        }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using api.Models;
 
 namespace api.Controllers
 {
@@ -27,8 +28,10 @@ namespace api.Controllers
 
         // POST: api/CustomerMood
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] CustomerMood value)
         {
+            CustomerMoodUtility addCustMood = new CustomerMoodUtility();
+            addCustMood.AddCustomers(value);
         }
 
         // PUT: api/CustomerMood/5

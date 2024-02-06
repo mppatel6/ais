@@ -29,6 +29,14 @@ namespace api.Controllers
             return "value";
         }
 
+        [HttpGet("/GetTime", Name = "GetTime")]
+        public string GetTime()
+        {
+            CustomerUtility utility = new CustomerUtility();
+            string time = utility.GetTime();
+            return time;
+        }
+
         // POST: api/Customer
         [HttpPost]
         public void Post([FromBody] Customer value)
