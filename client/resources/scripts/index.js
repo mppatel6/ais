@@ -2,8 +2,8 @@ let app = document.getElementById("app")
 
 function handleOnLoad(){
     let html = `
-    <div class="container">
-    <div class="my-5">
+    <div class="container-fluid">
+    <div class="my-5 px-3">
         <div class="p-5 text-center bg-body-tertiary rounded">
         <div class="container py-5">
         <h1 class="display-3 fw-bold">Welcome to Beam</h1>

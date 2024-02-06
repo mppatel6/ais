@@ -3,13 +3,13 @@
 }
 
 .btn-primary{
-    background-color: #F4D916;
+    /* background-color: #F4D916; */
     border-radius: 8px;
     font-size: 16px;
     border-color: transparent;
 }
 .btn-secondary{
-    background-color: #f4a616;
+    /* background-color: #f4a616; */
     border-radius: 8px;
     font-size: 16px;
     border-color: transparent;
@@ -19,9 +19,14 @@
     border-color: transparent;
 }
 .btn-secondary:hover{
-    background-color: #F4D916;
+    /* background-color: #F4D916; */
+    background-color: #f4a616;
     border-color: transparent;
 }
 .rounded{
     border-radius: 50%;
+}
+
+#white{
+    color: black;
 }
