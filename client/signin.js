@@ -2,20 +2,26 @@ const url = "http://localhost:5100/api/Customer"
 
 async function login(){
     let customers = await getCustomers()
+    console.log(customers)
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
+    let id;
 
     let foundAccount = false
 
     customers.forEach(function(a){
         if(email == a.email && password == a.password && email != '' && password != ''){
             foundAccount = true
+            id = a.customer_id
+            
         }
     })
 
     if(foundAccount){
         console.log('you entered correct info')
         sessionStorage.setItem('account', email)
+        sessionStorage.setItem('id', id)
+
         window.location.href = "dashboard.html"
  
     } else console.log('INVALID LOGIN')
