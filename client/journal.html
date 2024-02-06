@@ -20,13 +20,13 @@
     <form id="journalForm">
       <div class="form-group">
         <label for="entryDate">Date:</label>
-        <input type="date" class="form-control" id="entryDate" required>
+        <input type="date" class="form-control" id="date" required>
       </div>
       <div class="form-group">
         <label for="entryContent">Write your journal entry:</label>
-        <textarea class="form-control" id="entryContent" rows="5" required></textarea>
+        <textarea class="form-control" id="message" rows="5" required></textarea>
       </div>
-      <button type="submit" class="btn btn-primary">Add Entry</button>
+      <button type="submit" class="btn btn-primary" onclick="createJournal()">Add Entry</button>
     </form>
 
     <hr>
@@ -47,8 +47,8 @@
       $("#journalForm").submit(function(event){
         event.preventDefault();
         // Get values from form
-        var entryDate = $("#entryDate").val();
-        var entryContent = $("#entryContent").val();
+        var entryDate = $("#date").val();
+        var entryContent = $("#message").val();
         // Create new journal entry element
         var newEntry = $("<div>").addClass("journal-entry");
         newEntry.append("<h4>" + entryDate + "</h4>");

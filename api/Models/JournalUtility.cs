@@ -36,19 +36,20 @@ namespace api.Models
             con.Open();
  
             // check line below
-            string stm = "INSERT INTO journal (journal_id, customer_id, date, message) VALUES (@journal_id, @customer_id, @date, @message);";
+            string stm = "INSERT INTO journal (customer_id, date, message) VALUES(@customer_id, @date, @message);";
             using var cmd = new MySqlCommand(stm, con);
             
             // cmd.Parameters.AddWithValue("@journalID", journal.journalID);
-            cmd.Parameters.AddWithValue("@journal_id", journal.journal_id);
             cmd.Parameters.AddWithValue("@customer_id", journal.customer_id);
             cmd.Parameters.AddWithValue("@date", journal.date);
             cmd.Parameters.AddWithValue("@message", journal.message);
+
+            System.Console.WriteLine(journal.message);
  
             cmd.Prepare();
             cmd.ExecuteNonQuery();
  
-            con.Close();
+            // con.Close();
         }
     }
 }

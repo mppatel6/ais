@@ -2,17 +2,19 @@ const url = "http://localhost:5100/api/Journal"
 
 async function createJournal(){
     let journals = await getJournals()
-    let Message = document.getElementById('entryContent').value
 
     let customer = sessionStorage.getItem('id')
     
     let journal = {
+        journal_id: 1,
         customer_id: customer,
-        message: Message,
-        date: document.getElementById('entryDate').value
+        date: document.getElementById('date').value,
+        message: document.getElementById('message').value
     }
+console.log(journal)
 
     if(journal){
+
         const response = await fetch(url, {
             method: "POST",
             body: JSON.stringify(journal),
