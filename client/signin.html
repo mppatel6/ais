@@ -4,23 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./resources/styles/signIn.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Document</title>
+    <link rel= "stylesheet" href = "./resources/styles/signup.css">
+    <title>Sign Up</title>
 </head>
 <body>
     <section class="vh-100 gradient-custom">
         <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+
               <div class="card bg-dark text-white" style="border-radius: 1rem;">
                 <div class="card-body p-5 text-center">
       
                   <div class="mb-md-5 mt-md-4 pb-5">
       
-                    <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
-                    <p class="text-white-50 mb-5">Please enter your login and password!</p>
+                    <h2 class="fw-bold mb-2 text-uppercase">Create Account</h2>
+                    <p class="text-white-50 mb-5">Please enter an email and password!</p>
       
+                    <div class="form-outline form-white mb-4">
+                      <input type="email" id="firstName" class="form-control form-control-lg" />
+                      <label class="form-label" for="typeEmailX">First Name</label>
+                    </div>
+
+                    <div class="form-outline form-white mb-4">
+                      <input type="email" id="lastName" class="form-control form-control-lg" />
+                      <label class="form-label" for="typeEmailX">Last Name</label>
+                    </div>
+
                     <div class="form-outline form-white mb-4">
                       <input type="email" id="email" class="form-control form-control-lg" />
                       <label class="form-label" for="typeEmailX">Email</label>
@@ -31,30 +42,58 @@
                       <label class="form-label" for="typePasswordX">Password</label>
                     </div>
       
-                    <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
-      
-                    <button class="btn btn-outline-light btn-lg px-5" type="submit" onclick="login()">Login</button>
+                    <button class="btn btn-outline-light btn-lg px-5" type="submit" onclick="createAccount()">Create Account</button>
       
                     <div class="d-flex justify-content-center text-center mt-4 pt-1">
                       <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
                       <a href="#!" class="text-white"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
                       <a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
                     </div>
-      
                   </div>
-      
-                  <div>
-                    <p class="mb-0">Don't have an account? <a href="./signup.html" class="text-white-50 fw-bold">Sign Up</a>
-                    </p>
-                  </div>
-      
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="signUpModalLabel">Welcome!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Thank you for creating an account. Could you please answer these questions before moving on.
+              <div class="question">
+                <p>Question 1: Your preferences?</p>
+                <label><input type="radio" name="q1" value="Option 1"> Option 1</label>
+                <label><input type="radio" name="q1" value="Option 2"> Option 2</label>
+                <label><input type="radio" name="q1" value="Option 3"> Option 3</label>
+              </div>
+              
+              <div class="question">
+                <p>Question 1: Your preferences?</p>
+                <label><input type="radio" name="q1" value="Option 1"> Option 1</label>
+                <label><input type="radio" name="q1" value="Option 2"> Option 2</label>
+                <label><input type="radio" name="q1" value="Option 3"> Option 3</label>
+              </div>
+
+              <div class="question">
+                <p>Question 1: Your preferences?</p>
+                <label><input type="radio" name="q1" value="Option 1"> Option 1</label>
+                <label><input type="radio" name="q1" value="Option 2"> Option 2</label>
+                <label><input type="radio" name="q1" value="Option 3"> Option 3</label>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary" onclick="nextPage()">submit</button>
+            </div>
+          </div>
+        </div>
+      </div>      
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-      <script src="./signin.js"></script>
+      <script src="./signup.js"></script>
 </body>
 </html>

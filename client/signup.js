@@ -32,11 +32,18 @@ async function createAccount(){
     
         if (response.ok) {
             alert("Account created successfully!")
-            window.location.href = "signin.html"
         } else {
             alert("Account creation failed. Please try again.")
         }
+
+        let myModal = new bootstrap.Modal(document.getElementById('signUpModal'));
+        myModal.show();
     }
+    
+}
+
+async function nextPage(){
+    window.location.href='signin.html';
 }
 
 async function getCustomers(){
