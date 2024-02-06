@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\hrenn\\placeholder\\ais\\api\\api.csproj": {}
   },
   "projects": {
@@ -17,22 +16,6 @@
         "configFilePaths": [
           "C:\\Users\\hrenn\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-=======
-    "/Users/micahpentecost/ais/api/api.csproj": {}
-  },
-  "projects": {
-    "/Users/micahpentecost/ais/api/api.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/Users/micahpentecost/ais/api/api.csproj",
-        "projectName": "api",
-        "projectPath": "/Users/micahpentecost/ais/api/api.csproj",
-        "packagesPath": "/Users/micahpentecost/.nuget/packages/",
-        "outputPath": "/Users/micahpentecost/ais/api/obj/",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/Users/micahpentecost/.nuget/NuGet/NuGet.Config"
->>>>>>> journal
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -97,11 +80,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.405\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/7.0.100/libexec/sdk/7.0.100/RuntimeIdentifierGraph.json"
->>>>>>> journal
         }
       }
     }

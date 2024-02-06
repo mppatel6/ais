@@ -9998,16 +9998,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\hrenn\\.nuget\\packages\\": {}
-=======
-    "/Users/micahpentecost/.nuget/packages/": {}
->>>>>>> journal
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\hrenn\\placeholder\\ais\\api\\api.csproj",
       "projectName": "api",
       "projectPath": "C:\\Users\\hrenn\\placeholder\\ais\\api\\api.csproj",
@@ -10017,16 +10012,6 @@
       "configFilePaths": [
         "C:\\Users\\hrenn\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-=======
-      "projectUniqueName": "/Users/micahpentecost/ais/api/api.csproj",
-      "projectName": "api",
-      "projectPath": "/Users/micahpentecost/ais/api/api.csproj",
-      "packagesPath": "/Users/micahpentecost/.nuget/packages/",
-      "outputPath": "/Users/micahpentecost/ais/api/obj/",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "/Users/micahpentecost/.nuget/NuGet/NuGet.Config"
->>>>>>> journal
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -10091,12 +10076,16 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.405\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/7.0.100/libexec/sdk/7.0.100/RuntimeIdentifierGraph.json"
->>>>>>> journal
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\hrenn\\placeholder\\ais\\api\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
