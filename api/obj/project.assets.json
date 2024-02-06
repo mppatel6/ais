@@ -9998,19 +9998,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/manavpatel/.nuget/packages/": {}
+    "/Users/micahpentecost/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/manavpatel/Desktop/AIS/ais/api/api.csproj",
+      "projectUniqueName": "/Users/micahpentecost/ais/api/api.csproj",
       "projectName": "api",
-      "projectPath": "/Users/manavpatel/Desktop/AIS/ais/api/api.csproj",
-      "packagesPath": "/Users/manavpatel/.nuget/packages/",
-      "outputPath": "/Users/manavpatel/Desktop/AIS/ais/api/obj/",
+      "projectPath": "/Users/micahpentecost/ais/api/api.csproj",
+      "packagesPath": "/Users/micahpentecost/.nuget/packages/",
+      "outputPath": "/Users/micahpentecost/ais/api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/manavpatel/.nuget/NuGet/NuGet.Config"
+        "/Users/micahpentecost/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
