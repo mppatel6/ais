@@ -1,8 +1,12 @@
+using MySql.Data.MySqlClient;
+using api.Models;
+
+
 namespace api.Models
 {
     public class JournalUtility
     {
-           public static List<Journal>  GetJournalData(){
+           public List<Journal>  GetJournalData(){
             List<Journal> entries = new List<Journal>();
             Database db = new Database();
             using var con = new MySqlConnection(db.cs);
@@ -11,7 +15,7 @@ namespace api.Models
             using var cmd = new MySqlCommand(stm, con);
             using MySqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read()){
-                journals.Add(new journal
+                entries.Add(new Journal
                 {
                     journal_id = rdr.GetInt32(0),
                     customer_id = rdr.GetInt32(1),
@@ -25,7 +29,7 @@ namespace api.Models
             return entries;
         }
  
-        public static void InsertJournalData(Journal journal){
+        public void InsertJournalData(Journal journal){
             Database db = new Database();
  
             using var con = new MySqlConnection(db.cs);
@@ -36,7 +40,7 @@ namespace api.Models
             using var cmd = new MySqlCommand(stm, con);
             
             // cmd.Parameters.AddWithValue("@journalID", journal.journalID);
-            cmd.Parameters.AddWithValue("@journal_id", jounal.journal_id);
+            cmd.Parameters.AddWithValue("@journal_id", journal.journal_id);
             cmd.Parameters.AddWithValue("@customer_id", journal.customer_id);
             cmd.Parameters.AddWithValue("@date", journal.date);
             cmd.Parameters.AddWithValue("@message", journal.message);

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using api.Models;
 
 namespace api.Controllers
 {
@@ -13,13 +14,14 @@ namespace api.Controllers
     {
         // GET: api/Journal
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<Journal> Get()
         {
-            return new string[] { "value1", "value2" };
+            JournalUtility utility = new JournalUtility();
+            return utility.GetJournalData();
         }
 
         // GET: api/Journal/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "GetJournal")]
         public string Get(int id)
         {
             return "value";
@@ -27,8 +29,10 @@ namespace api.Controllers
 
         // POST: api/Journal
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Journal value)
         {
+            JournalUtility utility = new JournalUtility();
+            utility.InsertJournalData(value);
         }
 
         // PUT: api/Journal/5
