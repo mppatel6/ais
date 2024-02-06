@@ -73,6 +73,7 @@ let recordedButtonId;
   function recordButtonId(buttonId) {
     recordedButtonId = buttonId;
     console.log("Button ID recorded:", recordedButtonId);
+    document.getElementById(buttonId).style.backgroundColor = "#f4a616";
   }
 
   async function generateResponse(){
