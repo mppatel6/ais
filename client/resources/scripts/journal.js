@@ -11,7 +11,7 @@ async function createJournal(){
         date: document.getElementById('date').value,
         message: document.getElementById('message').value
     }
-console.log(journal)
+    console.log(journal)
 
     if(journal){
 
@@ -25,10 +25,13 @@ console.log(journal)
     
         if (response.ok) {
             alert("Journal created successfully!")
+            document.getElementById('message').value = ''
         } else {
             alert("Journal creation failed. Please try again.")
         }
     }
+
+    
     
 }
 
