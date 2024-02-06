@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hrenn\\placeholder\\ais\\api\\api.csproj": {}
+    "/Users/manavpatel/Desktop/AIS/ais/api/api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hrenn\\placeholder\\ais\\api\\api.csproj": {
+    "/Users/manavpatel/Desktop/AIS/ais/api/api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hrenn\\placeholder\\ais\\api\\api.csproj",
+        "projectUniqueName": "/Users/manavpatel/Desktop/AIS/ais/api/api.csproj",
         "projectName": "api",
-        "projectPath": "C:\\Users\\hrenn\\placeholder\\ais\\api\\api.csproj",
-        "packagesPath": "C:\\Users\\hrenn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hrenn\\placeholder\\ais\\api\\obj\\",
+        "projectPath": "/Users/manavpatel/Desktop/AIS/ais/api/api.csproj",
+        "packagesPath": "/Users/manavpatel/.nuget/packages/",
+        "outputPath": "/Users/manavpatel/Desktop/AIS/ais/api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hrenn\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/manavpatel/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -80,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/7.0.100/libexec/sdk/7.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }
