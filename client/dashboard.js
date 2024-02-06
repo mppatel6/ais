@@ -76,37 +76,89 @@ let recordedButtonId;
     document.getElementById(buttonId).style.backgroundColor = "#f4a616";
   }
 
-  async function generateResponse(){
-    let text = document.getElementById("chat-text").value
-    console.log(text)
-    const url = "http://localhost:5100/api/Chat"
-  
-    let response = await fetch(url,{  //post announcement to database
-      method: "POST",
-      body: JSON.stringify(text),
-      headers:{
-          "Content-type": "application/json; charset=UTF-8"
-      }
-    })
-    let response2 = await response.json()
-    // console.log(response2)
-    console.log(response2.choices[0].message.content)
-  
-    gptresponse = response2.choices[0].message.content
-  
-    document.getElementById("chatter").innerHTML += `\n\n`;
-    document.getElementById("chatter").innerHTML += text;
-    document.getElementById("chatter").innerHTML += `\n\n`;
-    document.getElementById("chatter").innerHTML += gptresponse
-  
-    // const url1 = "http://localhost:5100/api/Customer"
-    // let response1 = await fetch(url1)
-    // let data = await response1.json()
-    // console.log(data)
-    // const url = "http://localhost:5100/api/Chat"
-    // let response = await fetch(url)
-    // let data1 = await response.json()
-    // console.log(data1)
-  }
+  // Mike
 
+  // async function generateResponse(){
+  //   let text = document.getElementById("chat-text").value
+  //   console.log(text)
+  //   const url = "http://localhost:5100/api/Chat"
   
+  //   let response = await fetch(url,{  //post announcement to database
+  //     method: "POST",
+  //     body: JSON.stringify(text),
+  //     headers:{
+  //         "Content-type": "application/json; charset=UTF-8"
+  //     }
+  //   })
+  //   let response2 = await response.json()
+  //   // console.log(response2)
+  //   console.log(response2.choices[0].message.content)
+  
+  //   gptresponse = response2.choices[0].message.content
+  
+  //   document.getElementById("chatter").innerHTML += `\n\n`;
+  //   document.getElementById("chatter").innerHTML += text;
+  //   document.getElementById("chatter").innerHTML += `\n\n`;
+  //   document.getElementById("chatter").innerHTML += gptresponse
+  
+  //   // const url1 = "http://localhost:5100/api/Customer"
+  //   // let response1 = await fetch(url1)
+  //   // let data = await response1.json()
+  //   // console.log(data)
+  //   // const url = "http://localhost:5100/api/Chat"
+  //   // let response = await fetch(url)
+  //   // let data1 = await response.json()
+  //   // console.log(data1)
+  // }
+  async function generateResponse() {
+    // Get user input
+    let text = document.getElementById("chat-text").value.trim();
+    
+    // Check if input is empty
+    if (text === "") {
+        return;
+    }
+
+    // Clear input field
+    document.getElementById("chat-text").value = "";
+
+    // Append user message
+    appendMessage(text, "user");
+
+    // Fetch response from server
+    const url = "http://localhost:5100/api/Chat";
+    let response = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify({ message: text }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    });
+    let response2 = await response.json();
+    let gptresponse = response2.choices[0].message.content;
+
+    // Append bot response
+    appendMessage(gptresponse, "bot");
+
+    // Scroll to bottom of chat
+    scrollToBottom();
+}
+
+function appendMessage(message, sender) {
+    const messageContainer = document.getElementById("chatter");
+
+    // Create message element
+    const messageElement = document.createElement("div");
+    messageElement.classList.add("message", sender);
+
+    // Set message text
+    messageElement.innerText = message;
+
+    // Append message element to container
+    messageContainer.appendChild(messageElement);
+}
+
+function scrollToBottom() {
+    const messageContainer = document.getElementById("chatter");
+    messageContainer.scrollTop = messageContainer.scrollHeight;
+}
