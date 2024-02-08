@@ -1,4 +1,4 @@
-const url = "http://localhost:5100/api/Customer"
+const url = "https://aisapi-3933831f6e69.herokuapp.com/api/customer"
 
 async function login(){
     let customers = await getCustomers()

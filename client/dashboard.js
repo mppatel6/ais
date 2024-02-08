@@ -126,7 +126,7 @@ let recordedButtonId;
     appendMessage(text, "user");
 
     // Fetch response from server
-    const url = "http://localhost:5100/api/Chat";
+    const url = "https://aisapi-3933831f6e69.herokuapp.com/api/chat";
     let response = await fetch(url, {
         method: "POST",
         body: JSON.stringify({ message: text }),
