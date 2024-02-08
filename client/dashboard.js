@@ -76,40 +76,7 @@ let recordedButtonId;
     document.getElementById(buttonId).style.backgroundColor = "#f4a616";
   }
 
-  // Mike
-
-  // async function generateResponse(){
-  //   let text = document.getElementById("chat-text").value
-  //   console.log(text)
-  //   const url = "http://localhost:5100/api/Chat"
   
-  //   let response = await fetch(url,{  //post announcement to database
-  //     method: "POST",
-  //     body: JSON.stringify(text),
-  //     headers:{
-  //         "Content-type": "application/json; charset=UTF-8"
-  //     }
-  //   })
-  //   let response2 = await response.json()
-  //   // console.log(response2)
-  //   console.log(response2.choices[0].message.content)
-  
-  //   gptresponse = response2.choices[0].message.content
-  
-  //   document.getElementById("chatter").innerHTML += `\n\n`;
-  //   document.getElementById("chatter").innerHTML += text;
-  //   document.getElementById("chatter").innerHTML += `\n\n`;
-  //   document.getElementById("chatter").innerHTML += gptresponse
-  
-  //   // const url1 = "http://localhost:5100/api/Customer"
-  //   // let response1 = await fetch(url1)
-  //   // let data = await response1.json()
-  //   // console.log(data)
-  //   // const url = "http://localhost:5100/api/Chat"
-  //   // let response = await fetch(url)
-  //   // let data1 = await response.json()
-  //   // console.log(data1)
-  // }
   async function generateResponse() {
     // Get user input
     let text = document.getElementById("chat-text").value.trim();
@@ -129,14 +96,16 @@ let recordedButtonId;
     const url = "https://aisapi-3933831f6e69.herokuapp.com/api/chat";
     let response = await fetch(url, {
         method: "POST",
-        body: JSON.stringify({text}),
+        body: JSON.stringify(text),
         headers: {
             "Content-type": "application/json; charset=UTF-8"
         }
     });
     let response2 = await response.json();
+    console.log(response2);
     let gptresponse = response2.choices[0].message.content;
 
+    console.log(gptresponse)
     // Append bot response
     appendMessage(gptresponse, "bot");
 
@@ -144,19 +113,49 @@ let recordedButtonId;
     scrollToBottom();
 }
 
+// function appendMessage(message, sender) {
+//     const messageContainer = document.getElementById("chatter");
+
+//     // Create message element
+//     const messageElement = document.createElement("div");
+//     messageElement.classList.add("message", sender);
+
+//     // Set message text
+//     messageElement.innerText = message;
+
+//     // Append message element to container
+//     messageContainer.appendChild(messageElement);
+// }
+
+
+// function appendMessage(message, sender) {
+//   const messageContainer = document.getElementById("chatter");
+  
+//   // Create message HTML
+//   const messageHTML = `<div class="message ${sender}">${message}</div>`;
+  
+//   // Append message HTML to container
+//   messageContainer.insertAdjacentHTML('beforeend', messageHTML);
+// }
+
+
 function appendMessage(message, sender) {
-    const messageContainer = document.getElementById("chatter");
+  const messageContainer = document.getElementById("chatter");
 
-    // Create message element
-    const messageElement = document.createElement("div");
-    messageElement.classList.add("message", sender);
+  // Create text node with the message
+  messageContainer.appendChild(document.createElement("br"));
+  const messageTextNode = document.createTextNode("\n\n" + message);
 
-    // Set message text
-    messageElement.innerText = message;
 
-    // Append message element to container
-    messageContainer.appendChild(messageElement);
+  messageContainer.appendChild(document.createElement("br"));
+  // Append message text node to container
+  messageContainer.appendChild(messageTextNode);
+
+  // Append line break for better readability
+  messageContainer.appendChild(document.createElement("br"));
+  messageContainer.appendChild(document.createElement("br"));
 }
+
 
 function scrollToBottom() {
     const messageContainer = document.getElementById("chatter");
