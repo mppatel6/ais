@@ -129,7 +129,7 @@ let recordedButtonId;
     const url = "https://aisapi-3933831f6e69.herokuapp.com/api/chat";
     let response = await fetch(url, {
         method: "POST",
-        body: JSON.stringify({ message: text }),
+        body: JSON.stringify({text}),
         headers: {
             "Content-type": "application/json; charset=UTF-8"
         }
