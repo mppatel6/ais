@@ -63,28 +63,16 @@
               <h5 class="modal-title" id="signUpModalLabel">Welcome!</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-              Thank you for creating an account. Could you please answer these questions before moving on.
-              <div class="question">
-                <p>Question 1: Your preferences?</p>
-                <label><input type="radio" name="q1" value="Option 1"> Option 1</label>
-                <label><input type="radio" name="q1" value="Option 2"> Option 2</label>
-                <label><input type="radio" name="q1" value="Option 3"> Option 3</label>
-              </div>
-              
-              <div class="question">
-                <p>Question 1: Your preferences?</p>
-                <label><input type="radio" name="q1" value="Option 1"> Option 1</label>
-                <label><input type="radio" name="q1" value="Option 2"> Option 2</label>
-                <label><input type="radio" name="q1" value="Option 3"> Option 3</label>
-              </div>
-
-              <div class="question">
-                <p>Question 1: Your preferences?</p>
-                <label><input type="radio" name="q1" value="Option 1"> Option 1</label>
-                <label><input type="radio" name="q1" value="Option 2"> Option 2</label>
-                <label><input type="radio" name="q1" value="Option 3"> Option 3</label>
-              </div>
+            <div class="modal-body" id ="preferences">
+              Thank you for creating an account. Please select the areas you would like to focus on:
+        <br><div id="editlist1" class="dropdown-check-list visible" tabindex="100">
+        <ul class="items scrollable-dropdown">
+        <li><input type="checkbox">Mood Tracker</li>
+        <li><input type="checkbox">Water Intake</li>
+        <li><input type="checkbox">Beam Bot</li>
+        <li><input type="checkbox">Beamboard Reports & Analytics</li>
+        </ul>
+        </div><br>
 
             </div>
             <div class="modal-footer">

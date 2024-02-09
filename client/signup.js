@@ -35,7 +35,6 @@ async function createAccount(){
         } else {
             alert("Account creation failed. Please try again.")
         }
-
         let myModal = new bootstrap.Modal(document.getElementById('signUpModal'));
         myModal.show();
     }
@@ -52,3 +51,4 @@ async function getCustomers(){
 
     return await customers
 }
+

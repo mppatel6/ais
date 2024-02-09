@@ -22,7 +22,10 @@ public class OpenAIService
     {
         using var httpClient = new HttpClient();
         httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _apiKey);
- 
+        
+       
+        //string[] prompts = GetPastPrompts(prompt);
+
         var requestBody = new
         {
             model = "gpt-3.5-turbo",
@@ -41,4 +44,23 @@ public class OpenAIService
  
         return responseString;
     }
+
+    // public string[] GetPastPrompts(string prompt){
+    //     string filePath = "data.txt";
+
+    //     // Write data to the file
+    //     using (StreamWriter writer = new StreamWriter(filePath, true))
+    //     {
+    //         writer.Write(prompt);
+    //     }
+    //     Console.WriteLine("Data saved to local storage.");
+    //     string[] data;
+    //     using (StreamReader reader = new StreamReader(filePath))
+    //     {
+    //         data = File.ReadAllLines(filePath);
+    //     }
+        
+    //     return data;
+        
+    // }
 }

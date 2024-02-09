@@ -18,7 +18,8 @@ namespace api.Controllers
         async public Task<string> Get()
         {
             var service = new OpenAIService();
-            var prompt = "What is the best weather to live in";
+            var prompt = @"You are a helpful and joyous mental therapy assistant. Always answer as helpfully and cheerfully as possible, while being safe. Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content.Please ensure that your responses are socially unbiased and positive in nature.
+                    If a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.";
             var response = await service.CallOpenAIAPIAsync(prompt);
             Console.WriteLine(response);
             return response;
@@ -39,6 +40,7 @@ namespace api.Controllers
             var service = new OpenAIService();
             var prompt = value;
             var response = await service.CallOpenAIAPIAsync(prompt);
+            
             Console.WriteLine(response);
             return response;
 

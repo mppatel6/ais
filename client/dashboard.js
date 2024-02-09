@@ -1,4 +1,20 @@
 /* globals Chart:false */
+async function handleOnLoad(){
+  const url = "https://aisapi-3933831f6e69.herokuapp.com/api/chat";
+  text = `You are a helpful and joyous mental therapy assistant. Always answer as helpfully and cheerfully as possible, while being safe. Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content.Please ensure that your responses are socially unbiased and positive in nature.
+  If a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.`
+  let promptresponse = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(text),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    });
+  let gptresponse = await promptresponse.json();
+  let response = gptresponse.choices[0].message.content
+  console.log(response);
+}
+
 
 (() => {
     'use strict'
@@ -20,13 +36,13 @@
         ],
         datasets: [{
           data: [
-            15339,
-            21345,
-            18483,
-            24003,
-            23489,
-            24092,
-            12034
+            15.3,
+            21.3,
+            18.4,
+            24.0,
+            23.4,
+            24.0,
+            12.0
           ],
           lineTension: 0,
           backgroundColor: 'transparent',
@@ -102,7 +118,6 @@ let recordedButtonId;
         }
     });
     let response2 = await response.json();
-    console.log(response2);
     let gptresponse = response2.choices[0].message.content;
 
     console.log(gptresponse)
